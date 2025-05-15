@@ -1,6 +1,6 @@
 DeKa: https://github.com/DeKa3331/notesforJS
 
-### Dodanie do klasy 'string' nowej metody:
+## Dodanie do klasy 'string' nowej metody:
 ```JS
 String.prototype.mirror = function () {
   return this.split('').reverse().join('');
@@ -11,7 +11,7 @@ console.log("Ala ma kota".mirror()); // "atok am alA"
 
 ```
 
-### Metoda klasy wykorzystująca mechanizm 'clousers':
+## Metoda klasy wykorzystująca mechanizm 'clousers':
 ```JS
 function createCounter() {
   let count = 0; // prywatna zmienna dostępna tylko wewnątrz closure
