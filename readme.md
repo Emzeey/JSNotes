@@ -10,3 +10,24 @@ String.prototype.mirror = function () {
 console.log("Ala ma kota".mirror()); // "atok am alA"
 
 ```
+
+### Metoda klasy wykorzystująca mechanizm 'clousers':
+```JS
+function createCounter() {
+  let count = 0; // prywatna zmienna dostępna tylko wewnątrz closure
+
+  return function() {
+    count++;
+    return count;
+  };
+}
+
+// Przykład użycia:
+const counter1 = createCounter();
+console.log(counter1()); // 1
+console.log(counter1()); // 2
+
+const counter2 = createCounter();
+console.log(counter2()); // 1 (niezależny licznik)
+```
+Clousers (domknięcia) - to sytuacja, gdy funkcja „zapamiętuje” zmienne ze swojego otoczenia (z zakresu, w którym została stworzona), nawet jeśli zostanie wywołana później, poza tym zakresem.
