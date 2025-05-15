@@ -10,6 +10,18 @@ String.prototype.mirror = function () {
 console.log("Ala ma kota".mirror()); // "atok am alA"
 
 ```
+To samo ale inaczej:
+```JS
+String.prototype.mirror = function () {
+  let new_str = ""
+  for(let i=this.length-1; i >= 0; i--) {
+  	new_str += this[i]
+  }
+  return new_str;
+};
+
+console.log("Ala ma kota".mirror());
+```
 
 ## Metoda klasy wykorzystująca mechanizm 'clousers':
 ```JS
